@@ -1,9 +1,9 @@
 export default function(){
   return[
-    {title:'Javascript'},
-    {title:'Harry Potter'},
-    {title:'The Dart Tower'},
-    {title:'Eloquent Ruby'},
-    {title:'Hello World'}
+    {title:'Javascript', pages: 101},
+    {title:'Harry Potter', pages: 102},
+    {title:'The Dart Tower', pages: 103},
+    {title:'Eloquent Ruby', pages: 104},
+    {title:'Hello World', pages: 105}
   ]
 }
