@@ -1,4 +1,4 @@
-export function selectedBook(book) {
+export function selectBook(book) {
 
   return{
     type : 'BOOK_SELECTED',
