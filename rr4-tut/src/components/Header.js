@@ -6,7 +6,8 @@ const Header = () => {
   return (
     <div className="header">
       <Link to="/" className="item">홈</Link>
-      <Link to="/about" className="item">소개</Link>
+      <Link to="/about/jeongmin" className="item">소개</Link>
+      <Link to="/posts" className="item">포스트</Link>
     </div>
 
   );
