@@ -17,6 +17,11 @@ function counter(state = initialState, action){
         ...state,
         number:state.number -1
       };
+    case types.SET_COLOR:
+      return {
+        ...state,
+        color: action.color
+      }
     default:
     return state;
   }
