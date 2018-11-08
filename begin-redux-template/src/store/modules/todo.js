@@ -27,10 +27,11 @@ export default handleActions({
   [CHANGE_INPUT]: (state, action) => state.set('input', action.payload),
   [INSERT]: (state, {payload: text}) => {
     const item = Map({ id: id++, checked: false, text});
-    return state.update('todos', todos => todo.push(item));
+    return state.update('todos', todos => todos.push(item));
   },
   [TOGGLE]: (state, {payload: id}) => {
     const index = state.get('todos').findIndex(item => item.get('id') === id);
+    return state.updateIn(['todos', index, 'checked'], checked => !checked);
   },
   [REMOVE]: (state, { payload: id }) =>{
     const index = state.get('todos').findIndex(item => item.get('id')===id);
