@@ -8,7 +8,7 @@ export const decrement = createAction(DECREMENT);
 
 export const incrementAsync = () => dispatch => {
     setTimeout(
-        () => { dixpatch(increment())},
+        () => { dispatch(increment())},
         1000
     );
 }
