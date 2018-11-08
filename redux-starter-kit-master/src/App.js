@@ -8,14 +8,23 @@ import * as postActions from './modules/post';
 class App extends Component {
 
     componentDidMount() {
-        const { number, PostActions } = this.props;
-        PostActions.getPost(number);
+        const { number } = this.props;
+        this.getPost(number);
     }
     componentWillReceiveProps(nextProps){
-        const { PostActions } = this.props;
-
         if(this.props.number !== nextProps.number) {
-            PostActions.getPost(nextProps.number)
+            this.getPost(nextProps.number)
+        }
+    }
+
+    getPost = async (postId) => {
+        const {PostActions} = this.props;
+
+        try{
+            await PostActions.getPost(postId);
+            console.log('요청이 완료 된 다음에 실행됨')
+        } catch(e){
+            console.log('에러가 발생!');
         }
     }
 
